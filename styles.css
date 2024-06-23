@@ -30,7 +30,6 @@ body {
     background-color: black;
     align-items: flex-end;
     box-sizing: border-box;
-    position: fixed;
     border: solid;
     border-color: grey;
     border-width: 1px;
@@ -43,7 +42,7 @@ body {
 .column3 {
     width: 456.43px;
     background-color: black;
-    height: 15573.7px;
+    height: 15000px;
     border-left: solid;
     border-color: grey;
     border-width: 1px;
@@ -52,6 +51,7 @@ body {
 .column1, .column2, .column3 {
     display: table-cell;
 }
+
 
 /* Styling the sidebar*/
 .sidebar {
@@ -158,6 +158,7 @@ body {
     width: 210px;
     display: flex;
     align-items: center;
+    margin-left: 100px;
     height: 65px;
     padding: 2px;
     font-size: 17px;
@@ -169,6 +170,7 @@ body {
     bottom: 0%;
     align-content: center;
     text-align: center;
+    background-color: transparent;
 }
 
 .account:hover {
@@ -182,10 +184,12 @@ body {
     background-color:none;
     width: 24px;
     height: 24px;
+    background-color: transparent;
 }
 
 .account .front i {
     font-size: 36px!important;
+    background-color: transparent;
     position:relative;
     width: 35px;
   }
@@ -193,10 +197,12 @@ body {
   p {
     display: inline-block;
     width:70%;
+    background-color: transparent;
   }
 
   .account .back i {
     font-size: 36px!important;
+    background-color: transparent;
     position:relative;
     width: 25px;
     color:black;
@@ -213,13 +219,13 @@ body {
         border-bottom: solid;
         border-color: grey;
         border-width: 1px;
+        position: fixed;
     }
 
     .navbar button {
         color: white;
         width: 298.295px;
         float: left;
-        /* display: inline-block; */
         align-items: center;
         height: 53px;
         padding: 0 16px;
@@ -228,6 +234,7 @@ body {
 
     .navbar button:hover {
         background: #f9f9f922;
+        cursor: pointer;
     }
     
     .b1 {
@@ -293,11 +300,16 @@ body {
 
     .searchbaricons i {
         color: rgb(29, 155, 240);
-        padding-top: 17px;
-        padding-right: 5px;
+        padding: 5px;
         filter: brightness(50%);
         font-size: 24px;
-        margin: none;
+        margin-top: 17px;
+    }
+
+    .searchbaricons i:hover {
+        cursor: pointer;
+        background-color: rgba(29, 156, 240, 0.218);
+        border-radius: 50%;
     }
 
     .postbutton2 {
@@ -346,7 +358,13 @@ body {
         border-color: grey;
         border-width: 1px;
     }
-    .tweet_icons:hover {
+
+    .tweet_icons i {
+        fill: none;
+        outline-color: #606060;
+        outline-width: 5px;
+    }
+    .tweet_icons i:hover {
         background-color: rgb(29, 155, 240);
         border: none;
         border-radius: 9999999px;
@@ -360,7 +378,7 @@ body {
         margin-right: 20px;
         cursor: pointer;
         margin-bottom: 15px;
-        align-items: center;
+        align-items: top;
         display: flex;
         justify-content: space-between;
     }
@@ -382,7 +400,7 @@ body {
 
     .profile_p i:hover {
         cursor: pointer;
-        background-color: blue;
+        background-color: rgb(29, 155, 240);
     }
 
     .username_p {
@@ -408,8 +426,26 @@ body {
     }
 
     .tweet_icons i {
-        fill: none;
+        color:#606060;
+        /* outline-color: #941e1e;
+        outline-width: 3px; */
         
+    }
+
+    .material-icons .back i:hover {
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: rgb(29, 155, 240);
+    }
+    .hashtag {
+        color: rgb(29, 155, 240);
+        width: 150px;
+    }
+    .one_line {
+        align-items: center;
+        /* display: inline-flex; */
+        width: 450px;
+        height: 20px;
     }
 
     .searchbar2 {
@@ -516,8 +552,12 @@ body {
             margin-top: 20px;
         }
 
+        .trends_for_you_text {
+            color: #606060;
+        }
+
         .trends_info_p {
-            color: blue;
+            color: rgb(29, 155, 240);
             margin-left: 40px;
             margin-top: 28px;
         }
@@ -549,9 +589,9 @@ body {
 
     .trends_info i:hover {
         cursor: pointer;
-        background-color: blue;
-        filter: brightness(50%);
+        background-color: rgba(29, 156, 240, 0.218);
         border-radius: 50%;
+        filter: brightness(150%);
     }
     .trends_info span {
         float: left;
@@ -565,6 +605,10 @@ body {
     .trends_info i {
         float: right;
     }
+
+.trends_text p {
+    color: #606060;
+}
 
     /* Who to follow */
     .who_to_follow {
@@ -620,19 +664,28 @@ body {
             cursor: pointer; 
         }
     .footer {
-        width: 200px;
-        height: 200px; 
+        width: 350px;
+        height: 50px; 
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         margin-top: 20px;
-        margin-left: 25px;
-        border: solid;
-        border-color: grey;
-        border-width: 1px;
-        border-radius: 15px;
+        margin-left: 40px;
         display: flex;
         align-items: center;
+    }
+
+    .footer-section span {
+        font-size: 13px;
+        font-weight: 500;
+        margin-right: 20px;
+        color: #606060;
+       
+       
+    }
+
+    .footer-section span:hover {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
 
