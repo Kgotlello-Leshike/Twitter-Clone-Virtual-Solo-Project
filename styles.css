@@ -33,15 +33,19 @@ body {
     background-color: black;
 }
 .row {
-    width: 1519.46px;
     margin: auto;
-    display: table;
+    display: flex;
+    flex-direction: row;
     background-color: black;
 }
 .column1 {
     width: 465.43px;
     background-color: black;
     height: 100vh;
+
+    /* position: fixed;
+    top: 0;
+    left: 0; */
 }
 
 .column2 {
@@ -57,19 +61,24 @@ body {
     flex-direction: column;
     flex-shrink: 0;
     list-style: none;
+    overflow: auto;
 }
 
 .column3 {
     position: relative;
     width: 456.43px;
     background-color: black;
-    border-left: solid;
-    border-color: grey;
+    /* border-left: solid;
+    border-color: grey; */
     border-width: 1px;
     margin-left: 20px;
+    overflow: auto;
 }
 .column1, .column2, .column3 {
-    display: table-cell;
+    /* display: table-cell; */
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -175,7 +184,7 @@ body {
 }
 
 .account {
-    width: 210px;
+    width: 250px;
     display: flex;
     align-items: center;
     margin-left: 100px;
@@ -207,25 +216,27 @@ body {
     background-color: transparent;
 }
 
-.account .front i {
-    font-size: 36px!important;
+.account .material-icons.front {
+    font-size: 40px;
+    color: pink;
     background-color: transparent;
     position:relative;
-    width: 35px;
   }
   
   p {
     display: inline-block;
     width:70%;
     background-color: transparent;
+    margin: 0;
+    align-items: center;
   }
 
-  .account .back i {
-    font-size: 36px!important;
+  .account .material-icons.back {
+    font-size: 28px;
     background-color: transparent;
     position:relative;
     width: 25px;
-    color:black;
+    color:white;
   }
 
     /* Main - Container */
@@ -240,6 +251,7 @@ body {
     .navbar {
         position: fixed;
         top: 5px;
+        margin-bottom: 50px;
         height: 55px;
         width: 597.6px;
         border-bottom: solid;
@@ -248,7 +260,6 @@ body {
         align-items: center;
         padding: 0px;
         display: flex;
-        /* position: fixed; */
 
     }
 
@@ -270,6 +281,7 @@ body {
     
     .b1 {
         border-bottom: solid;
+        border-right: solid;
         border-color: grey;
         border-width: 1px;
         font-weight: bold;
@@ -277,6 +289,7 @@ body {
         text-decoration-thickness: 6px;
         text-underline-offset: 12px;
         text-decoration-color: rgb(29, 155, 240);
+        backdrop-filter: blur(5px);
     }
  
    .b2 {
@@ -284,17 +297,17 @@ body {
     border-right: solid;
     border-color: grey;
     border-width: 1px;
+    backdrop-filter: blur(5px);
    }
     /* What is happening tweet section */
     .tweet_section {
-
+        margin-top: 60px;
         width: 597.87px;
         height: 118.13px;
         padding: 0 16px;
         border-bottom: solid;
         border-color: grey;
         border-width: 1px;
-        background-color: #e0245e;
       
     }
 
@@ -517,11 +530,12 @@ body {
 
     .searchbar2 {
         position: fixed;
-        top: 6px;
-        width: 250px;
-        height: 30px;
+        top: 0;
+        width: 350px;
+        height: 53px;
         display: inline;
         align-items: center;
+        backdrop-filter: blur(5px);
     }
 
     .searchbar2 span {
@@ -577,7 +591,7 @@ body {
     .premium_section span {
         float: left;
         clear: left;
-        margin: 15px;
+        margin: 5px 10px 5px 25px;
       }
 
     .premium_section p {
@@ -619,13 +633,13 @@ body {
 
         .trends_for_you_text {
             color: #606060;
-            margin: 0px;
+            margin-top: 25px;
+            align-items: center;
         }
 
         .trends_info_p {
             color: rgb(29, 155, 240);
-            margin-left: 40px;
-            margin-top: 28px;
+            margin: 10px 0px 0px 40px;
         }
       .trends {
         width: 350px;
@@ -713,10 +727,15 @@ h2 {
         }
 
         .who_to_follow_section {
-            color: white;
-            display: inline-flex;
-            align-items: center;
-            margin-left: 10px;
+        color: white;
+        display: inline-block;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 100%;
+        height: 70px;
         }
 
         .follow_span {
